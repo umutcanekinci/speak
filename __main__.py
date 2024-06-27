@@ -4,8 +4,9 @@ from pygame import mixer
 from os import remove
 
 FILE = 'sound.mp3'
+LANGUAGE = 'tr'
 
-def Speak(text, language='tr') -> None:
+def Speak(text, language) -> None:
 
     mixer.init()
     
@@ -31,9 +32,9 @@ def Speak(text, language='tr') -> None:
 
 def TakeInput() -> str:
 
-    print('_________________________________________________________________')
-    print('What do you want me to say? (Enter exit() to quit)')
-    print('_________________________________________________________________')
+    print('_____________________________________________________________________________________________________')
+    print('What do you want me to say? (Enter exit() to quit, !tr for Turkish, !en for English, etc.)')
+    print('_____________________________________________________________________________________________________')
 
     return str(input('\n=> '))
 
@@ -41,9 +42,15 @@ def Main():
 
     read = TakeInput()
 
+    if read.startswith('!'):
+
+        Main.language = read[1:]
+        print(f'\nLanguage set to {Main.language}.')
+        read = TakeInput()
+
     if read != 'exit()':
 
-        Speak(read)
+        Speak(read, Main.language)
         mixer.music.unload()
         remove(FILE)
         Main()
@@ -51,4 +58,5 @@ def Main():
 
 if __name__ == '__main__':
 
+    Main.language = LANGUAGE
     Main()
