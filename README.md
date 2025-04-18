@@ -1,7 +1,7 @@
 # Speak
 
 Bu uygulama girdi olarak girilen yazıların sese dönüştürülmesini sağlar.
-Yeni versiyonda farklı dil seçenekleri eklendi.
+Yeni versiyonda farklı dil seçenekleri eklendi. 
 
 ## Uygulamadan Görseller
 
@@ -20,7 +20,7 @@ Projeyi çalıştırmak için aşağıdaki yazılımlara ihtiyacınız olacaktı
 
 ### Kurulum
 
-*Kurulum yapmadan derlenmiş edilmiş çalıştırılabilir uygulama ile devam etmek istiyorsanız kurulum aşaması atlayıp __main__.exe dosyasını çalıştırabilirsiniz.
+Kurulum yapmadan derlenmiş edilmiş çalıştırılabilir uygulama ile devam etmek istiyorsanız kurulum aşaması atlayıp __main__.exe dosyasını çalıştırabilirsiniz.
 
 
 Gerekli kütüphaneleri yüklemek için aşağıdaki adımları izleyin:
